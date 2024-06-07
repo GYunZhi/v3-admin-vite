@@ -1,6 +1,10 @@
 <script lang="ts" setup>
-import { ref } from "vue"
+import { ref, defineOptions } from "vue"
 import { Setting } from "@element-plus/icons-vue"
+
+defineOptions({
+  name: "RightPanel"
+})
 
 interface Props {
   buttonTop?: number

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, watchEffect } from "vue"
+import { computed, watchEffect, defineOptions } from "vue"
 import { storeToRefs } from "pinia"
 import { useSettingsStore } from "@/store/modules/settings"
 import useResize from "./hooks/useResize"
@@ -11,6 +11,10 @@ import TopMode from "./TopMode.vue"
 import LeftTopMode from "./LeftTopMode.vue"
 import { Settings, RightPanel } from "./components"
 import { getCssVariableValue, setCssVariableValue } from "@/utils"
+
+defineOptions({
+  name: "layout"
+})
 
 /** Layout 布局响应式 */
 useResize()

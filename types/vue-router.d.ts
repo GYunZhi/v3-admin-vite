@@ -1,6 +1,7 @@
 import "vue-router"
 
 declare module "vue-router" {
+  // 扩展 RouteMeta 接口
   interface RouteMeta {
     /**
      * 设置该路由在侧边栏和面包屑中展示的名字

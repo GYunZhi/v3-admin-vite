@@ -1,5 +1,3 @@
-/// <reference types="vitest" />
-
 import { type ConfigEnv, type UserConfigExport, loadEnv } from "vite"
 import path, { resolve } from "path"
 import vue from "@vitejs/plugin-vue"
@@ -10,7 +8,7 @@ import UnoCSS from "unocss/vite"
 
 /** 配置项文档：https://cn.vitejs.dev/config */
 export default ({ mode }: ConfigEnv): UserConfigExport => {
-  const viteEnv = loadEnv(mode, process.cwd()) as ImportMetaEnv
+  const viteEnv = loadEnv(mode, process.cwd())
   const { VITE_PUBLIC_PATH } = viteEnv
   return {
     /** 打包时根据实际情况修改 base */
@@ -93,11 +91,6 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       }),
       /** UnoCSS */
       UnoCSS()
-    ],
-    /** Vitest 单元测试配置：https://cn.vitest.dev/config */
-    test: {
-      include: ["tests/**/*.test.ts"],
-      environment: "jsdom"
-    }
+    ]
   }
 }
