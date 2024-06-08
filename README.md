@@ -46,7 +46,6 @@ China repository: [Gitee](https://gitee.com/un-pany/v3-admin-vite)
 - **ESlint**：Code verification
 - **Prettier**： Code formatting
 - **Axios**: Promise based HTTP client (encapsulated)
-- **UnoCSS**: Real-time atomized CSS engine with high performance and flexibility
 - **Mobile Compatible**: The layout is compatible with mobile page resolution
 
 ## Functions
